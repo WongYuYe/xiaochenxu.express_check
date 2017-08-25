@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+	<text class="title">Welcome</text>
+	<text class="intro">This is a small Wechat xiaochenxu for express check, thank u for use!</text>
+	<view class="input-wrapper">
+		<picker bindchange="pickECompany" value="currentCompany" range="{{ eCompanys }}">
+		    <view class="picker" wx:if="{{ currentCompany !== null }}">{{ eCompanys[currentCompany] }}</view>
+		    <view class="picker" wx:else>select express company</view>
+	  	</picker>
+	  	<input class="number" bindblur="getNumber" placeholder="input serial number" placeholder-style="color: #fff"/>
+	</view>
+	<view class="check" catchtap="checkExpress">check</view>
+</view>

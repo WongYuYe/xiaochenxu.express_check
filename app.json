@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/express/index",
+    "pages/details/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Express Check",
+    "navigationBarTextStyle":"black"
+  }
+}

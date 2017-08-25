@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container">
+	<text class="title">details</text>
+	<text class="intro">This is a small Wechat xiaochenxu for express check, thank u for use!</text>
+</view>
