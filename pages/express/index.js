@@ -14,7 +14,7 @@ Page({
   },
   // 选择邮递公司
   pickECompany: function(e) {
-    this.setData({
+    that.setData({
       currentCompany: e.detail.value
     })
   },
@@ -24,8 +24,14 @@ Page({
     })
   },
   checkExpress: function () {
-    wx.navigateTo({
-      url: '/pages/details/index?eCompany=' + this.data.eCompanysNum[this.data.currentCompany] + '&inputNumber=' + this.data.inputNumber
-    })
+    var that = this
+    if (!that.data.currentCompany) {
+      that.pickECompany(that)
+    }
+    // if (that.data.currentCompany && that.data.inputNumber) {
+    //   wx.navigateTo({
+    //     url: '/pages/details/index?eCompany=' + that.data.eCompanysNum[that.data.currentCompany] + '&inputNumber=' + that.data.inputNumber
+    //   })
+    // }
   }
 })
