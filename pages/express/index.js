@@ -9,6 +9,8 @@ Page({
     inputNumber: null   // 输入的邮递单号 3335534374395
   },
   onLoad: function () {
+    wx.showNavigationBarLoading()
+    setTimeout(() => wx.hideNavigationBarLoading(), 400)
   },
   // 选择邮递公司
   pickECompany: function(e) {
