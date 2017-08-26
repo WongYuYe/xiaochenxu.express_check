@@ -20,7 +20,8 @@
 .container .input-wrapper {
 	width: 78%;
 }
-.container .input-wrapper .picker, .container .input-wrapper .number {
+.container .input-wrapper .picker, 
+.container .input-wrapper .number {
 	height: 88rpx;
 	line-height: 88rpx;
 	text-align: center;

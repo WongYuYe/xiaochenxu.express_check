@@ -1,5 +1,21 @@
 <!--index.wxml-->
 <view class="container">
-	<text class="title">details</text>
-	<text class="intro">This is a small Wechat xiaochenxu for express check, thank u for use!</text>
+	<block wx:if="{{ isExist }}">
+		<text class="title">details</text>
+		<view class="intro">
+			<view class="check">express info: {{ isCheck }}</view>
+			<view class="company">express company: {{ currentCompany }}</view>
+			<view class="number">serial number: {{ expressDetails.nu }}</view>
+		</view>
+		<view class="details-wrapper">
+			<view wx:for="{{ expressDetails.data }}" wx:key="index" class="details {{ !index? 'cur': ''}}">
+				<view class="context">{{ item.context }}</view>
+				<view class="time">{{ item.time }}</view>
+			</view>
+		</view>
+	</block>
+	<block wx:else>
+		<text class="title">error</text>
+		<view class="error">Express company parameter exception: serial number does not exist or has expired</view>
+	</block>
 </view>
