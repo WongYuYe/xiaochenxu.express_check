@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-	<block wx:if="{{ isExist }}">
+	<block wx:if="{{ showDetails }}">
 		<text class="title">details</text>
 		<view class="intro">
 			<view class="check">express info: {{ isCheck }}</view>
@@ -14,7 +14,7 @@
 			</view>
 		</view>
 	</block>
-	<block wx:else>
+	<block wx:if="{{ showErr }}">
 		<text class="title">error</text>
 		<view class="error">Express company parameter exception: serial number does not exist or has expired</view>
 	</block>
